@@ -1,2 +1,5 @@
 server:
-  port: 8080
+  port: 8081
+
+greeting:
+  message: "Hello, i'm working on 8081 port!"
