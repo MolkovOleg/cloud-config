@@ -1,5 +1,0 @@
-server:
-  port: 8081
-
-greeting:
-  message: "Port 8081"
