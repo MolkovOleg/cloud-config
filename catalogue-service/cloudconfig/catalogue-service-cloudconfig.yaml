@@ -1,5 +1,5 @@
 address:
-  home: 192.168.0.145
+  home: 192.168.0.157
   work: 10.10.52.4
 
 keycloak:
@@ -23,7 +23,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://${address.work}:8082/realms/shop
+          issuer-uri: http://${address.home}:8082/realms/shop
       client:
         registration:
           keycloak:
@@ -41,7 +41,7 @@ spring:
               - discovery
         provider:
           keycloak:
-            issuer-uri: http://${address.work}:8082/realms/shop
+            issuer-uri: http://${address.home}:8082/realms/shop
 
 logging:
   level:
@@ -69,4 +69,4 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${address.work}:8761/eureka/
+      defaultZone: http://${address.home}:8761/eureka/
