@@ -1,6 +1,6 @@
 address:
   home: 192.168.0.157
-  work: 10.10.56.118
+  work: 10.10.50.74
 
 keycloak:
   uri: http://localhost:8082
