@@ -23,14 +23,14 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: catalogue-service
+            client-id: shop-catalogue-service
             client-secret: NP73Nazavhal8oGPJA1dRKhiUYnehEFN
             authorization-grant-type: client_credentials
             scope:
               - metrics_server
           discovery:
             provider: keycloak
-            client-id: catalogue-service
+            client-id: shop-catalogue-service
             client-secret: NP73Nazavhal8oGPJA1dRKhiUYnehEFN
             authorization-grant-type: client_credentials
             scope:
@@ -44,7 +44,7 @@ logging:
 springdoc:
   swagger-ui:
     oauth:
-      client-id: catalogue-service-swagger-ui
+      client-id: shop-catalogue-service-swagger-ui
       use-pkce-with-authorization-code-grant: true
 management:
   health:
