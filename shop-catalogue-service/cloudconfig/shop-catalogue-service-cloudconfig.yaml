@@ -24,14 +24,14 @@ spring:
         registration:
           keycloak:
             client-id: shop-catalogue-service
-            client-secret: NP73Nazavhal8oGPJA1dRKhiUYnehEFN
+            client-secret: a8qLbOvLNFJBllER5VOCplEgXKBqbibQ
             authorization-grant-type: client_credentials
             scope:
               - metrics_server
           discovery:
             provider: keycloak
             client-id: shop-catalogue-service
-            client-secret: NP73Nazavhal8oGPJA1dRKhiUYnehEFN
+            client-secret: a8qLbOvLNFJBllER5VOCplEgXKBqbibQ
             authorization-grant-type: client_credentials
             scope:
               - discovery
