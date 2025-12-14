@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    hostname: 172.20.10.6
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            user-name-attribute: preferred_username
+            issuer-uri: http://172.20.10.6:8082/realms/shop
+        registration:
+          keycloak:
+            client-id: eureka-service
+            client-secret: Aqbj6H1MJOWPBHsIKwtag8gAwdtmpoN3
+            scope:
+              - openid
+              - microprofile-jwt
+      resourceserver:
+        jwt:
+          issuer-uri: http://172.20.10.6:8082/realms/shop

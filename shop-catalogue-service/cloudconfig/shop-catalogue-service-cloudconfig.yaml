@@ -1,9 +1,5 @@
-address:
-  home: 192.168.0.157
-  work: 10.10.50.74
-
 keycloak:
-  uri: http://localhost:8082
+  uri: http://172.20.10.6:8082
 spring:
   boot:
     admin:
@@ -23,7 +19,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://${address.work}:8082/realms/shop
+          issuer-uri: http://172.20.10.6:8082/realms/shop
       client:
         registration:
           keycloak:
@@ -41,18 +37,15 @@ spring:
               - discovery
         provider:
           keycloak:
-            issuer-uri: http://${address.work}:8082/realms/shop
-
+            issuer-uri: http://172.20.10.6:8082/realms/shop
 logging:
   level:
     sql: info
-
 springdoc:
   swagger-ui:
     oauth:
       client-id: catalogue-service-swagger-ui
       use-pkce-with-authorization-code-grant: true
-
 management:
   health:
     livenessstate:
@@ -63,10 +56,9 @@ management:
     web:
       exposure:
         include: '*'
-
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${address.work}:8761/eureka/
+      defaultZone: http://172.20.10.6:8761/eureka/

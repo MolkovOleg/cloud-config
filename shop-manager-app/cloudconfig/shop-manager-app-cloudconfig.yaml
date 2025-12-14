@@ -1,0 +1,61 @@
+shop:
+  services:
+    catalogue:
+      url: lb://shop-catalogue-service
+      registrationId: keycloak
+spring:
+  application:
+    name: shop-manager-app
+  boot:
+    admin:
+      client:
+        enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://172.20.10.6:8082/realms/shop
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://172.20.10.6:8082/realms/shop
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: manager-app
+            client-secret: JwByKV4Y8m95GDYTNqJH6jfaj5dXpv8F
+            scope:
+              - openid
+              - view_catalogue
+              - edit_catalogue
+              - microprofile-jwt
+          metrics:
+            provider: keycloak
+            client-id: manager-app
+            client-secret: JwByKV4Y8m95GDYTNqJH6jfaj5dXpv8F
+            authorization-grant-type: client_credentials
+            scope:
+              - metrics_server
+          discovery:
+            provider: keycloak
+            client-id: manager-app
+            client-secret: JwByKV4Y8m95GDYTNqJH6jfaj5dXpv8F
+            authorization-grant-type: client_credentials
+            scope:
+              - discovery
+management:
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://172.20.10.6:8761/eureka/
