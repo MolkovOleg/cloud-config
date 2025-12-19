@@ -16,7 +16,7 @@ spring:
             issuer-uri: http://10.10.52.24:8082/realms/shop
         registration:
           keycloak:
-            client-id: shop-eureka-service
+            client-id: shop-eureka-server
             client-secret: HPeL35h2fdwAD8jk9Nk6zQK02MboDVne
             scope:
               - openid

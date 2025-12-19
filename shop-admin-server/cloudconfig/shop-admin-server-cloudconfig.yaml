@@ -14,18 +14,18 @@ spring:
             authorization-grant-type: client_credentials
             scope:
               - metrics
-            client-id: shop-admin-service
+            client-id: shop-admin-server
             client-secret: EN5AyCPXSRascr4YQbRN4dwZSOXBNJIk
           login:
             provider: keycloak
             scope:
               - metrics
               - openid
-            client-id: shop-admin-service
+            client-id: shop-admin-server
             client-secret: EN5AyCPXSRascr4YQbRN4dwZSOXBNJIk
           discovery:
             provider: keycloak
-            client-id: shop-admin-service
+            client-id: shop-admin-server
             client-secret: EN5AyCPXSRascr4YQbRN4dwZSOXBNJIk
             authorization-grant-type: client_credentials
             scope:
