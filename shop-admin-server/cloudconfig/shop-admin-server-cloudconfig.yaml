@@ -1,4 +1,8 @@
 spring:
+  boot:
+    admin:
+      discovery:
+        ignored-services: shop-admin-server
   security:
     oauth2:
       resourceserver:
