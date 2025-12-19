@@ -20,7 +20,6 @@ spring:
             client-secret: HPeL35h2fdwAD8jk9Nk6zQK02MboDVne
             scope:
               - openid
-              - microprofile-jwt
       resourceserver:
         jwt:
           issuer-uri: http://10.10.52.24:8082/realms/shop
