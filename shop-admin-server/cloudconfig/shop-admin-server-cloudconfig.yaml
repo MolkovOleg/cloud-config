@@ -3,11 +3,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://172.20.10.6:8082/realms/shop
+          issuer-uri: http://10.10.52.24:8082/realms/shop
       client:
         provider:
           keycloak:
-            issuer-uri: http://172.20.10.6:8082/realms/shop
+            issuer-uri: http://10.10.52.24:8082/realms/shop
             user-name-attribute: preferred_username
         registration:
           keycloak:
@@ -42,5 +42,5 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://172.20.10.6:8761/eureka/
+      defaultZone: http://10.10.52.24:8761/eureka/
     register-with-eureka: false

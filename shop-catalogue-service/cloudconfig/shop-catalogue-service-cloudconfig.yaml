@@ -1,5 +1,5 @@
 keycloak:
-  uri: http://172.20.10.6:8082
+  uri: http://10.10.52.24:8082
 spring:
   boot:
     admin:
@@ -19,7 +19,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://172.20.10.6:8082/realms/shop
+          issuer-uri: http://10.10.52.24:8082/realms/shop
       client:
         registration:
           keycloak:
@@ -37,7 +37,7 @@ spring:
               - discovery
         provider:
           keycloak:
-            issuer-uri: http://172.20.10.6:8082/realms/shop
+            issuer-uri: http://10.10.52.24:8082/realms/shop
 logging:
   level:
     sql: info
@@ -61,4 +61,4 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://172.20.10.6:8761/eureka/
+      defaultZone: http://10.10.52.24:8761/eureka/

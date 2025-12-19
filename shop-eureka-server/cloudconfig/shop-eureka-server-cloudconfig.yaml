@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: 172.20.10.6
+    hostname: 10.10.52.24
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -13,7 +13,7 @@ spring:
         provider:
           keycloak:
             user-name-attribute: preferred_username
-            issuer-uri: http://172.20.10.6:8082/realms/shop
+            issuer-uri: http://10.10.52.24:8082/realms/shop
         registration:
           keycloak:
             client-id: shop-eureka-service
@@ -23,4 +23,4 @@ spring:
               - microprofile-jwt
       resourceserver:
         jwt:
-          issuer-uri: http://172.20.10.6:8082/realms/shop
+          issuer-uri: http://10.10.52.24:8082/realms/shop
