@@ -6,7 +6,7 @@ spring:
       client:
         enabled: false
   datasource:
-    url: jdbc:postgresql://postgres:5432/catalogue
+    url: jdbc:postgresql://shop-catalogue-db:5432/catalogue
     username: catalogue
     password: catalogue
   flyway:
