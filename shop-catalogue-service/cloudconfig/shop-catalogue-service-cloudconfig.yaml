@@ -58,7 +58,11 @@ management:
         include: '*'
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: 10.10.52.24
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 1
   client:
     service-url:
       defaultZone: http://10.10.52.24:8761/eureka/
+    registry-fetch-interval-seconds: 1
+    register-with-eureka: true
